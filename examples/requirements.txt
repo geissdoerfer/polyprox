@@ -1,0 +1,4 @@
+polyprox
+matplotlib
+numpy
+rdp
