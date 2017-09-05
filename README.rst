@@ -8,7 +8,7 @@ Both approximate a planar curve given as a series of points by a subset of these
 points with the minimum maximum euclidean distance between the original curve
 and the linearly interpolated approximation. This distance is calculated
 according to the tolerance zone criterion, described in `Alexander Kolesnikov's
-thesis <http://cs.joensuu.fi/~koles/approximation/Ch3_1.html>`
+thesis <http://cs.joensuu.fi/~koles/approximation/Ch3_1.html>`_
 
 Both algorithms use the Ramer-Douglas-Peucker (RDP) algorithm as a subroutine.
 This algorithm is fast and usually ends up with good approximations, but does
