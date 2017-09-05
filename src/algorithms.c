@@ -1,3 +1,14 @@
+/*
+ * Copyright (c) 2017, Commonwealth Scientific and Industrial Research
+ * Organisation (CSIRO) - All Rights Reserved
+ * You may use, distribute and modify this code under the
+ * terms of the CSIRO Open Source Software License Agreement license.
+ *
+ * You should have received a copy of the CSIRO Open Source Software License
+ * Agreement license with this file. If not, please write to:
+ * kai.geissdoerfer@mailbox.tu-berlin.de
+ */
+
 #include "Python.h"
 #include "numpy/arrayobject.h"
 #include <math.h>
