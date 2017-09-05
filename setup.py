@@ -1,5 +1,4 @@
-
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 mod_algs = Extension('algorithms', sources = ['src/algorithms.c'])
 
