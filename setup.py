@@ -1,6 +1,7 @@
 from setuptools import setup, Extension
+import numpy
 
-mod_algs = Extension('algorithms', sources = ['src/algorithms.c'])
+mod_algs = Extension('algorithms', sources = ['src/algorithms.c'], include_dirs=[numpy.get_include()])
 
 setup(name='polyprox',
       version='0.1',
