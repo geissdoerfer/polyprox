@@ -386,9 +386,40 @@ static struct PyMethodDef methods[] = {
     {NULL, NULL}
 };
 
+#if PY_MAJOR_VERSION >= 3
+
+static struct PyModuleDef moduledef = {
+                                       PyModuleDef_HEAD_INIT,
+                                       "algorithms",
+                                       NULL,
+                                       -1,
+                                       methods,
+                                       NULL,
+                                       NULL,
+                                       NULL,
+                                       NULL
+};
+
+#define INITERROR return NULL
+PyMODINIT_FUNC
+PyInit_algorithms (void)
+
+#else
+#define INITERROR return
+
 PyMODINIT_FUNC
 initalgorithms (void)
+#endif
+
 {
+#if PY_MAJOR_VERSION >= 3
+    PyObject *module = PyModule_Create(&moduledef);
+    import_array();
+    if (module == NULL)
+        INITERROR;
+    return module;
+#else
     (void)Py_InitModule("algorithms", methods);
     import_array();
+#endif
 }
