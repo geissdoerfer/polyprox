@@ -1,6 +1,9 @@
 Polygonal Curve approximation
 -----------------------------
 
+.. image:: https://travis-ci.org/geissdoerfer/polyprox.svg?branch=master
+    :target: https://travis-ci.org/geissdoerfer/polyprox
+
 Fast implementation of solutions to the min-num and min-e problems of digital
 curve approximation.
 
