@@ -21,7 +21,8 @@ setup(
     url="https://github.com/geissdoerfer/polyprox",
     ext_modules=[mod_algs],
     packages=["polyprox"],
-    setup_requires=["numpy"],
+    setup_requires=["numpy", "pytest-runner"],
     cmdclass={"build_ext": build_ext},
+    tests_require=["pytest>=3.9"],
 )
 
