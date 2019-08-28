@@ -14,7 +14,7 @@ class build_ext(_build_ext):
 mod_algs = Extension("algorithms", sources=["src/algorithms.c"])
 setup(
     name="polyprox",
-    version="0.2",
+    version="0.3",
     description="Polygonal curve approximation tools",
     author="Kai Geissdoerfer",
     author_email="kai.geissdoerfer@mailbox.tu-berlin.de",
