@@ -25,4 +25,3 @@ setup(
     cmdclass={"build_ext": build_ext},
     tests_require=["pytest>=3.9", "rdp"],
 )
-
