@@ -36,14 +36,14 @@ G = np.array((x, y)).transpose()
 epsilon = 20.0
 
 # Time execution of min_num method provided in this package
-t_start = time.clock()
+t_start = time.time()
 G_pp = polyprox.min_num(G, epsilon)
-t_exec_pp = time.clock() - t_start
+t_exec_pp = time.time() - t_start
 
 # Time execution of Hirschmann's implementation
-t_start = time.clock()
+t_start = time.time()
 G_rdp = rdp.rdp(G, epsilon)
-t_exec_rdp = time.clock() - t_start
+t_exec_rdp = time.time() - t_start
 
 print("Same result as rdp: {}".format(np.array_equal(G_rdp, G_pp)))
 print("Speedup: {:.2f}%".format((t_exec_rdp - t_exec_pp) / t_exec_rdp * 100.0))
@@ -57,7 +57,7 @@ plt.show()
 # Number of points by which to approximate
 m = 10
 G_pp = polyprox.min_e(G, m)
-t_exec_pp = time.clock() - t_start
+t_exec_pp = time.time() - t_start
 
 print("Requested: {} Got: {}".format(m, len(G_pp) - 2))
 
