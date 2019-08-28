@@ -23,6 +23,6 @@ setup(
     packages=["polyprox"],
     setup_requires=["numpy", "pytest-runner"],
     cmdclass={"build_ext": build_ext},
-    tests_require=["pytest>=3.9"],
+    tests_require=["pytest>=3.9", "rdp"],
 )
 
